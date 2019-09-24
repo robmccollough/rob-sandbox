@@ -2,7 +2,8 @@ const { Errors } = require('microstack');
 
 module.exports = service => async (parameters, user) => {
   return {
-      message: "Hello World!"
+        from: parameters,
+        message: 'new kitchen stuff'
   }
 };
 
@@ -14,7 +15,7 @@ module.exports.config = {
   },
   routing: {
     http: {  
-      get: true
+      post: true
     }
   },
   authentication: {
